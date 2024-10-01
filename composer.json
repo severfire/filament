@@ -5,7 +5,8 @@
     "require": {
         "php": "^8.1",
         "ext-intl": "*",
-        "composer-runtime-api": "^2.1"
+        "composer-runtime-api": "^2.1",
+        "spatie/laravel-csp": "^2.8"
     },
     "require-dev": {
         "anourvalar/eloquent-serialize": "^1.2",

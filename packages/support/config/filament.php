@@ -86,4 +86,20 @@ return [
 
     'livewire_loading_delay' => 'default',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Content Security Policy
+    |--------------------------------------------------------------------------
+    |
+    | This allows you to configure the Content Security Policy for your application.
+    |
+    */
+
+    'csp' => [
+        'policy' => Filament\Support\Policies\FilamentCspPolicy::class,
+        'report_only' => false,
+        'report_uri' => null,
+        'nonce_length' => 16,
+    ],
+
 ];

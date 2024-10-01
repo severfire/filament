@@ -29,6 +29,8 @@ use Illuminate\Support\Facades\Blade;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Spatie\Csp\AddCspHeaders;
+use Filament\Support\Policies\FilamentCspPolicy;
 
 class FilamentServiceProvider extends PackageServiceProvider
 {
@@ -97,6 +99,8 @@ class FilamentServiceProvider extends PackageServiceProvider
                 ], 'filament-stubs');
             }
         }
+
+        $this->app['router']->pushMiddlewareToGroup('web', AddCspHeaders::class.':'.FilamentCspPolicy::class);
     }
 
     /**
